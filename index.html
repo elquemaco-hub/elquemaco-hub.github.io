@@ -70,6 +70,10 @@
   </style>
 </head>
 <body>
+  <audio id="musica" autoplay loop>
+  <source src="fondo.mp3" type="audio/mpeg">
+</audio>
+
   <a href="https://youtube.com/@Elquemaco"
 target="_blank">
   <i class="fab fa-youtube icon"></i>
@@ -93,6 +97,13 @@ target="_blank">
 <a class="btn" href="#">🎨 Arte</a>
 <a class="btn" href="#">🌌 Proyectos</a>
 
+<script>
+  const audio = document.getElementById("musica");
+  audio.volume = 0.10; // volumen bajo (0.0 a 1.0)
 
+  document.addEventListener("click", () => {
+    audio.play();
+  }, { once: true });
+</script>
 </body>
 </html>
