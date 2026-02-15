@@ -31,7 +31,7 @@
 }
     
     body {
-      background-image: url("Dia de Playa.png");
+      background-image: url("diadeplaya.png");
       background-size: cover;
       background-position: center;
       background-attachment: fixed;
@@ -99,11 +99,14 @@ target="_blank">
 
 <script>
   const audio = document.getElementById("musica");
-  audio.volume = 0.10; // volumen bajo (0.0 a 1.0)
+  audio.volume = 0.08; // más suave
 
-  document.addEventListener("click", () => {
+  function iniciarMusica() {
     audio.play();
-  }, { once: true });
+    document.removeEventListener("click", iniciarMusica);
+  }
+
+  document.addEventListener("click", iniciarMusica);
 </script>
 </body>
 </html>
