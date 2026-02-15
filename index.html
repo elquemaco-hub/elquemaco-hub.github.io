@@ -97,16 +97,21 @@ target="_blank">
 <a class="btn" href="#">🎨 Arte</a>
 <a class="btn" href="#">🌌 Proyectos</a>
 
+<button id="toggleMusic">🔇 Música</button>
+
 <script>
   const audio = document.getElementById("musica");
-  audio.volume = 0.08; // más suave
+  const btn = document.getElementById("toggleMusic");
 
-  function iniciarMusica() {
-    audio.play();
-    document.removeEventListener("click", iniciarMusica);
-  }
-
-  document.addEventListener("click", iniciarMusica);
+  btn.addEventListener("click", () => {
+    if (audio.paused) {
+      audio.play();
+      btn.textContent = "🔊 Silenciar";
+    } else {
+      audio.pause();
+      btn.textContent = "🔇 Música";
+    }
+  });
 </script>
 </body>
 </html>
