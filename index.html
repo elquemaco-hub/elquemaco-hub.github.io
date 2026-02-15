@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html>
-  <button id="toggleMusic" class="cat-button">🐱🎵</button>
 
 <head>
   <title>Elquemaco</title>
@@ -103,6 +102,8 @@
   </style>
 </head>
 <body>
+  <button id="toggleMusic" class="cat-button">🐱🎵</button>
+  
   <audio id="musica" autoplay loop>
   <source src="diadeplaya1.mp3" type="audio/mpeg">
 </audio>
@@ -132,8 +133,22 @@ target="_blank">
 
 
 <script>
-   const audio = document.getElementById("musica");
+  const audio = document.getElementById("musica");
   const btn = document.getElementById("toggleMusic");
+
+  audio.volume = 0.2;
+
+  window.addEventListener("load", () => {
+    audio.play().catch(() => {
+      console.log("Autoplay bloqueado por el navegador");
+    });
+  });
+
+  document.addEventListener("click", () => {
+    if (audio.paused) {
+      audio.play();
+    }
+  }, { once: true });
 
   btn.addEventListener("click", () => {
     if (audio.paused) {
@@ -144,7 +159,6 @@ target="_blank">
       btn.textContent = "😼🔇";
     }
   });
-  
 </script>
 </body>
 </html>
