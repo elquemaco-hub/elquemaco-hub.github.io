@@ -7,47 +7,40 @@
   <link rel="icon" type="image/png" sizes="32x32" href="elquemaco_favicon_32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="elquemaco_favicon_16x16.png">
 
-  <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
-
   <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@700&display=swap" rel="stylesheet">
 
   <link rel="stylesheet"
   href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
   <style>
+    
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@700&display=swap" rel="stylesheet">
 
-    .beach-font {
-  font-family: 'Pacifico', cursive;
-  font-size: 80px;
-  position: relative;
-  display: inline-block;
-  color: #fff3c4;
+.titulo {
+  font-family: 'Baloo 2', cursive;
+  font-size: 70px;
+  color: #ffd000;
 
-  /* Rayitas vintage */
-  background: repeating-linear-gradient(
-    to bottom,
-    #fff3c4 0px,
-    #fff3c4 4px,
-    #f7e3a1 4px,
-    #f7e3a1 8px
-  );
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-
-  /* Borde turquesa grueso */
-  -webkit-text-stroke: 4px #0f5c6e;
-
-  /* Sombra profunda */
   text-shadow:
-    6px 6px 0 #083c47,
-    0 0 25px rgba(0, 0, 0, 0.4);
+    0 4px 0 #cc9900,
+    0 8px 20px rgba(0,0,0,0.4);
 
-  transition: 0.3s ease;
+  margin-top: 40px;
 }
 
-.beach-font:hover {
+.titulo:hover {
   transform: rotate(-2deg) scale(1.05);
 }
+
+
+.titulo:hover {
+  transform: rotate(-2deg) scale(1.05);
+  text-shadow:
+    0 0 10px #fff700,
+    0 0 40px #ffea00,
+    0 0 80px #ffc400;
+}
+
     
     body {
       background-image: url("diadeplaya.png");
@@ -120,8 +113,6 @@
   </style>
 </head>
 <body>
-  <h1 class="beach-font">Elquemaco ฅ^•ﻌ•^ฅ</h1>
-
   <button id="toggleMusic" class="cat-button">🐱🎵</button>
   
   <audio id="musica" autoplay loop>
