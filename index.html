@@ -15,13 +15,6 @@
   href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
   <style>
-    
-<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@700&display=swap" rel="stylesheet">
-
-.titulo {
-  font-family: 'Baloo 2', cursive;
-  font-size: 70px;
-  color: #ffd000;
 
     .beach-font {
   font-family: 'Pacifico', cursive;
@@ -46,40 +39,91 @@
 
   /* Sombra profunda */
   text-shadow:
-    0 4px 0 #cc9900,
-    0 8px 20px rgba(0,0,0,0.4);
-
-  margin-top: 40px;
-}
     6px 6px 0 #083c47,
     0 0 25px rgba(0, 0, 0, 0.4);
 
-.titulo:hover {
-  transform: rotate(-2deg) scale(1.05);
   transition: 0.3s ease;
 }
 
-
-.titulo:hover {
 .beach-font:hover {
   transform: rotate(-2deg) scale(1.05);
-  text-shadow:
-    0 0 10px #fff700,
-    0 0 40px #ffea00,
-    0 0 80px #ffc400;
+}
+    
+    body {
+      background-image: url("diadeplaya.png");
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      color: white;
+      text-align: center;
+      font-family: Arial;
+    }
+
+    .icon {
+      font-size: 50px;
+      margin: 20px;
+      color: white;
+      transition: 0.3s;
+    }
+
+    .icon:hover {
+      color: yellow;
+      transform: scale(1.2);
+      text-shadow: 0 0 20px gold;
+    }
+
+    .btn {
+      border: 2px solid cyan;
+      padding: 10px 20px;
+      display: inline-block;
+      margin: 15px;
+      color: cyan;
+      text-decoration: none;
+    }
+
+    .btn:hover {
+      background-color: cyan;
+      color: black;
+    }
+    .cat-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+
+  background: linear-gradient(145deg, #ffd84d, #ffcc00);
+  color: #5a3e00;
+
+  border: 3px solid #ffb700;
+  border-radius: 50px;
+
+  padding: 12px 18px;
+  font-size: 18px;
+  font-weight: bold;
+
+  cursor: pointer;
+
+  box-shadow:
+    0 0 15px rgba(255, 215, 0, 0.6),
+    0 0 25px rgba(255, 200, 0, 0.4);
+
+  transition: all 0.3s ease;
+}
+
+.cat-button:hover {
+  transform: scale(1.1);
+  box-shadow:
+    0 0 20px rgba(255, 230, 0, 0.9),
+    0 0 40px rgba(255, 200, 0, 0.6);
 }
 
 
-    body {
-      background-image: url("diadeplaya.png");
-@@ -113,63 +120,65 @@
   </style>
 </head>
 <body>
   <h1 class="beach-font">Elquemaco ฅ^•ﻌ•^ฅ</h1>
 
   <button id="toggleMusic" class="cat-button">🐱🎵</button>
-
+  
   <audio id="musica" autoplay loop>
   <source src="diadeplaya1.mp3" type="audio/mpeg">
 </audio>
@@ -99,7 +143,7 @@ target="_blank">
   <i class="fas fa-gamepad icon"></i>
 </a>
 
-
+  
 
 <h1 class="titulo">Elquemaco ฅ^•ﻌ•^ฅ</h1>
 
