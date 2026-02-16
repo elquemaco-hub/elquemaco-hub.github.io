@@ -17,16 +17,27 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
   <style>
 
 .beach-font {
-  font-family: 'Bangers', cursive;
-  font-size: 95px;
-  letter-spacing: 4px;
-  color: #ffcc00;
+  font-family: 'Luckiest Guy', cursive; 
+  font-size: 90px;
+  letter-spacing: 3px;
+  color: #ffd84d;
 
-  -webkit-text-stroke: 4px #0b4a57;
+  -webkit-text-stroke: 4px #083c47;
 
   text-shadow:
-    8px 8px 0 #062c33;
+    6px 6px 0 #062c33,
+    0 0 30px rgba(255, 200, 0, 0.6);
+
+  transition: transform 0.25s cubic-bezier(.34,1.56,.64,1);
+
 }
+    .beach-font:hover {
+  transform: scale(1.08);
+  text-shadow:
+    8px 8px 0 #062c33,
+    0 0 40px rgba(255, 220, 0, 0.8);
+}
+
 
 
 
